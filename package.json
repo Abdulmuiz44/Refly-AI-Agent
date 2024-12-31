@@ -4,8 +4,7 @@
   "description": "Refly is an AI-powered assistant that creates engaging marketing copy for referral programs, airdrops, and affiliate promotions.",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js"
   },
   "keywords": [
     "AI",
@@ -18,8 +17,5 @@
   "license": "ISC",
   "dependencies": {
     "axios": "^1.7.9"
-  },
-  "devDependencies": {
-    "@flydotio/dockerfile": "^0.5.9"
   }
 }

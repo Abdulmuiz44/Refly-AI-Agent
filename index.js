@@ -1,6 +1,6 @@
 const axios = require('axios'); // Importing Axios
 
-const apiKey = '5RdOMhZ2SVttJonCUdsPnkcbeKOg5ktj'; // Correct API key
+const apiKey = process.env.MISTRAL_API_KEY; // Use an environment variable for the API key
 
 async function getChatResponse() {
   try {
@@ -21,7 +21,7 @@ async function getChatResponse() {
       },
       {
         headers: {
-          'Authorization': `Bearer ${apiKey}`, // Using the correct API key for authorization
+          'Authorization': `Bearer ${apiKey}`, // Use the environment variable here
           'Content-Type': 'application/json'  // Setting the content type to JSON
         }
       }
@@ -29,7 +29,7 @@ async function getChatResponse() {
 
     console.log('Chat Response:', response.data.choices[0].message.content);
   } catch (error) {
-    console.error('Error:', error);
+    console.error('Error:', error.message);
   }
 }
 
